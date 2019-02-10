@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 885cdf5ff5e10d94bb8527def2313b29
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Baseboard.004
+    100002: Baseboard.005
+    100004: Baseboard.006
+    100006: Baseboard.007
+    100008: Baseboard.008
+    100010: BaseboardDoor.002
+    100012: BaseboardDoorSideL.001
+    100014: BaseboardDoorSideR.001
+    100016: Floor.014
+    100018: Floor.015
+    100020: //RootNode
+    100022: LightBeam.011
+    100024: LightBeam.012
+    100026: Roof.014
+    100028: Roof.015
+    100030: Wall.024
+    100032: Wall.025
+    100034: Wall.026
+    100036: Wall.027
+    100038: Wall.028
+    100040: WallDoor.007
+    100042: WallDoorSideL.001
+    400000: Baseboard.004
+    400002: Baseboard.005
+    400004: Baseboard.006
+    400006: Baseboard.007
+    400008: Baseboard.008
+    400010: BaseboardDoor.002
+    400012: BaseboardDoorSideL.001
+    400014: BaseboardDoorSideR.001
+    400016: Floor.014
+    400018: Floor.015
+    400020: //RootNode
+    400022: LightBeam.011
+    400024: LightBeam.012
+    400026: Roof.014
+    400028: Roof.015
+    400030: Wall.024
+    400032: Wall.025
+    400034: Wall.026
+    400036: Wall.027
+    400038: Wall.028
+    400040: WallDoor.007
+    400042: WallDoorSideL.001
+    2100000: Wall
+    2100002: Floor
+    2100004: Baseboards
+    2100006: DoorFrame
+    2100008: Roof
+    2100010: LightBeam
+    2100012: LightBulb
+    2300000: Baseboard.004
+    2300002: Baseboard.005
+    2300004: Baseboard.006
+    2300006: Baseboard.007
+    2300008: Baseboard.008
+    2300010: BaseboardDoor.002
+    2300012: BaseboardDoorSideL.001
+    2300014: BaseboardDoorSideR.001
+    2300016: Floor.014
+    2300018: Floor.015
+    2300020: LightBeam.011
+    2300022: LightBeam.012
+    2300024: Roof.014
+    2300026: Roof.015
+    2300028: Wall.024
+    2300030: Wall.025
+    2300032: Wall.026
+    2300034: Wall.027
+    2300036: Wall.028
+    2300038: WallDoor.007
+    2300040: WallDoorSideL.001
+    3300000: Baseboard.004
+    3300002: Baseboard.005
+    3300004: Baseboard.006
+    3300006: Baseboard.007
+    3300008: Baseboard.008
+    3300010: BaseboardDoor.002
+    3300012: BaseboardDoorSideL.001
+    3300014: BaseboardDoorSideR.001
+    3300016: Floor.014
+    3300018: Floor.015
+    3300020: LightBeam.011
+    3300022: LightBeam.012
+    3300024: Roof.014
+    3300026: Roof.015
+    3300028: Wall.024
+    3300030: Wall.025
+    3300032: Wall.026
+    3300034: Wall.027
+    3300036: Wall.028
+    3300038: WallDoor.007
+    3300040: WallDoorSideL.001
+    4300000: Wall.024
+    4300002: Floor.014
+    4300004: Baseboard.004
+    4300006: WallDoor.007
+    4300008: BaseboardDoor.002
+    4300010: Roof.014
+    4300012: Wall.025
+    4300014: Baseboard.005
+    4300016: Baseboard.006
+    4300018: Floor.015
+    4300020: Wall.027
+    4300022: Wall.028
+    4300024: Baseboard.007
+    4300026: Wall.026
+    4300028: Baseboard.008
+    4300030: WallDoorSideL.001
+    4300032: BaseboardDoorSideL.001
+    4300034: BaseboardDoorSideR.001
+    4300036: Roof.015
+    4300038: LightBeam.011
+    4300040: LightBeam.012
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
