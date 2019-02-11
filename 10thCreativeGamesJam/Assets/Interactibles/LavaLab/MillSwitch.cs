@@ -17,6 +17,7 @@ public class MillSwitch : MonoBehaviour
     private GameObject player;
     private bool canPush = false;
     private bool doorOpened = false;
+    private bool canDoorCam = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -34,35 +35,52 @@ public class MillSwitch : MonoBehaviour
         if (canPush && Input.GetKeyDown(KeyCode.E)) {
             animMill.SetTrigger("MillOn");
             viewText.text = "";
+            canDoorCam = true;
             SwitchCameras();
             Invoke("OpenDoor", 4f);
+            if (canPush) {
+                canPush = false;
+            } else {
+                canPush = true;
+            }
         }
     }
 
     public void SwitchCameras() {
-        if (playerCam.enabled) {
-            playerCam.enabled = false;
-            millCam.enabled = true;
-            doorCam.enabled = false;
-            player.GetComponent<PlayerMovement>().enabled = false;
-            player.GetComponentInChildren<CameraController>().enabled = false;
-        }
-        else if (millCam.enabled || doorCam.enabled) {
+        //if (playerCam.enabled) 
+        if (millCam.enabled || doorCam.enabled) {
+            Debug.Log("OtherToPlayerCam");
+            canDoorCam = false;
             playerCam.enabled = true;
             millCam.enabled = false;
             doorCam.enabled = false;
             player.GetComponent<PlayerMovement>().enabled = true;
             player.GetComponentInChildren<CameraController>().enabled = true;
+        } else {
+            Debug.Log("PlayerCamToOther");
+            millCam.enabled = true;
+            playerCam.enabled = false;
+            doorCam.enabled = false;
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponentInChildren<CameraController>().enabled = false;
         }
     }
 
     public void OpenDoor() {
         if (!doorOpened) {
-            animDoor.SetTrigger("Open");
-            doorCam.enabled = true;
-            playerCam.enabled = false;
-            millCam.enabled = false;
-            doorOpened = true;
+            if (canDoorCam) {
+                animDoor.SetTrigger("Open");
+                doorOpened = true;
+                doorCam.enabled = true;
+                playerCam.enabled = false;
+                millCam.enabled = false;
+            } else {
+                animDoor.SetTrigger("Open");
+                doorOpened = true;
+                doorCam.enabled = false;
+                playerCam.enabled = true;
+                millCam.enabled = false;
+            }
         }
     }
 
