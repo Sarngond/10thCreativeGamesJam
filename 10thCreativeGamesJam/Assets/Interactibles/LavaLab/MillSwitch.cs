@@ -16,8 +16,9 @@ public class MillSwitch : MonoBehaviour
     private Animator animDoor;
     private GameObject player;
     private bool canPush = false;
-    private bool doorOpened = false;
-    private bool canDoorCam = false;
+    private bool canSwitch = false;
+    //private bool doorOpened = false;
+    //private bool canDoorCam = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -35,35 +36,67 @@ public class MillSwitch : MonoBehaviour
         if (canPush && Input.GetKeyDown(KeyCode.E)) {
             animMill.SetTrigger("MillOn");
             viewText.text = "";
-            canDoorCam = true;
-            SwitchCameras();
-            Invoke("OpenDoor", 4f);
-            if (canPush) {
-                canPush = false;
-            } else {
-                canPush = true;
-            }
+            SwitchToMill();
+            //canDoorCam = true;
+            //SwitchCameras();
+            //Invoke("OpenDoor", 4f);
         }
     }
 
-    public void SwitchCameras() {
-        //if (playerCam.enabled) 
+    private void SwitchToMill() {
+        millCam.enabled = true;
+        playerCam.enabled = false;
+
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponentInChildren<CameraController>().enabled = false;
+
+        Invoke("SwitchToDoor", 4f);
+    }
+
+    private void SwitchToDoor() {
+        animDoor.SetTrigger("Open");
+        doorCam.enabled = true;
+        millCam.enabled = false;
+        
+        Invoke("SwitchToPlayer", 3f);
+    }
+
+    private void SwitchToPlayer() {
+        playerCam.enabled = true;
+        doorCam.enabled = false;
+
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponentInChildren<CameraController>().enabled = true;
+    }
+
+    /*public void SwitchCameras() {
+        if (playerCam.enabled) {
+            SwitchToMill();
+        }
         if (millCam.enabled || doorCam.enabled) {
-            Debug.Log("OtherToPlayerCam");
-            canDoorCam = false;
-            playerCam.enabled = true;
-            millCam.enabled = false;
-            doorCam.enabled = false;
-            player.GetComponent<PlayerMovement>().enabled = true;
-            player.GetComponentInChildren<CameraController>().enabled = true;
-        } else {
-            Debug.Log("PlayerCamToOther");
+            SwitchToPlayer();
+        }
+    }
+
+    public void SwitchToMill() {
+        if (canDoorCam) {
+        Debug.Log("Player2Other");
             millCam.enabled = true;
             playerCam.enabled = false;
             doorCam.enabled = false;
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponentInChildren<CameraController>().enabled = false;
         }
+    }
+
+    public void SwitchToPlayer() {
+        Debug.Log("Other2Player");
+        canDoorCam = false;
+        playerCam.enabled = true;
+        millCam.enabled = false;
+        doorCam.enabled = false;
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponentInChildren<CameraController>().enabled = true;
     }
 
     public void OpenDoor() {
@@ -82,7 +115,7 @@ public class MillSwitch : MonoBehaviour
                 millCam.enabled = false;
             }
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider collider) {
         if (collider == player.GetComponent<Collider>()) {
